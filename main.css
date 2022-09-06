@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&display=swap");
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.default,
+.error {
+  grid-column: 1/4;
+  align-self: center;
+  justify-self: center;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+main {
+  width: 900px;
+  padding: 20px;
+}
+
+.theme-name {
+  margin-right: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  cursor: pointer;
+}
+
+.search form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.search form label {
+  text-align: center;
+  margin: auto;
+  font-size: 1.3rem;
+  width: 50px;
+}
+
+.search form label i {
+  margin: auto;
+  line-height: 30px;
+}
+
+.search form .form_input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.search form .form_input::placeholder {
+  color: #afafaf;
+}
+
+.search form .search_input {
+  font-weight: 400;
+  width: 80px;
+  border: none;
+  background: none;
+  background-color: #5800ff;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  color: #f5f7ff;
+}
+
+.user_info {
+  padding: 50px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: minmax(auto, 5px);
+  grid-template-columns: 120px 1fr 1fr;
+}
+
+.user_info img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  align-self: start;
+  grid-row: 1/4;
+}
+
+.user_info h2 {
+  align-self: start;
+  font-size: 1.2rem;
+  font-weight: 600;
+  align-self: center;
+}
+
+.user_info h4 {
+  justify-self: end;
+  font-weight: 300;
+  align-self: center;
+  font-size: 0.9rem;
+}
+
+.user_info h5 {
+  grid-column: 2/4;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  color: #5800ff;
+}
+
+.user_info .about {
+  grid-column: 2/4;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.user_info .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 2/4;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.user_info .stats p {
+  font-size: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.user_info .stats small {
+  font-weight: 600;
+}
+
+.user_info .contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 2/4;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.user_info .contact a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.user_info .contact i {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 0.9rem;
+  }
+  .default {
+    font-size: 1rem;
+  }
+  .error {
+    font-size: 0.9rem;
+  }
+  .user_info {
+    padding: 30px 20px;
+  }
+  .user_info img {
+    width: 60px;
+    height: 60px;
+    order: 1;
+  }
+  .user_info {
+    grid-template-columns: 70px 1fr 1fr;
+  }
+  .user_info h2 {
+    grid-column: 2/4;
+    order: 2;
+    font-size: 1rem;
+  }
+  .user_info h4 {
+    order: 4;
+    margin-top: 10px;
+    grid-column: 2/4;
+    font-size: 0.8rem;
+  }
+  .user_info h5 {
+    order: 3;
+    font-size: 0.9rem;
+  }
+  .user_info .about {
+    order: 5;
+    grid-column: 1/4;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  .user_info .stats {
+    order: 6;
+    grid-column: 1/4;
+    font-size: 0.9rem;
+  }
+  .user_info .contact {
+    order: 7;
+    grid-column: 1/4;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .user_info .contact {
+    grid-template-columns: 1fr;
+  }
+  .user_info .contact a {
+    display: inline-block;
+  }
+}

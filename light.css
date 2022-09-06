@@ -1,0 +1,24 @@
+* {
+  color: #1b2442;
+}
+
+body {
+  background-color: #e0efe8;
+}
+
+.user_info {
+  background-color: #f5f7ff;
+}
+
+.search form {
+  background-color: #f5f7ff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.user_info {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.user_info .stats {
+  background-color: #e0efe8;
+}
